@@ -1,8 +1,7 @@
 ## 목차
 * LSB & MSB
-    * LSB란?
-    * MSB란?
-* unsinged number
+    * [LSB란?](https://github.com/elilly00/TIL/blob/main/Computer%20Science/MSB%26LSB.md#l)
+    * [MSB란?](https://github.com/elilly00/TIL/blob/main/Computer%20Science/MSB%26LSB.md#msb%EB%9E%80)
 
 # LSB & MSB
 ## LSB란?
