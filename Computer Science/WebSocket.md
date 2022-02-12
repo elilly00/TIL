@@ -1,7 +1,7 @@
 # 목차
-* WebSocket
-* STOMP
-* 프로토콜이란?
+* [WebSocket](https://github.com/elilly00/TIL/blob/main/Computer%20Science/WebSocket.md#websocket)
+* [STOMP](https://github.com/elilly00/TIL/blob/main/Computer%20Science/WebSocket.md#stomp)
+* [프로토콜이란?](https://github.com/elilly00/TIL/blob/main/Computer%20Science/WebSocket.md#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%9D%B4%EB%9E%80)
 
 <br/>
 
