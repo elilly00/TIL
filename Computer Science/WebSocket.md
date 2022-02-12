@@ -9,7 +9,7 @@
 * TCP 연결에 완전한 이중 통신 채널을 제공하는 컴퓨터 통신 프로토콜
 * Server와 Client 간 열결을 유지한 상태로 데이터를 교환 할 수 있다.
 
-데이터는 <b>패킷(Packet)</b>형태로 전달되며, 전송은 커넥션 중단과 추가 HTTP 요청 없이 양방향으로 이뤄진다. <br/>
+데이터는 <b>[패킷(Packet)](https://github.com/elilly00/TIL/blob/main/Computer%20Science/Packet.md)</b>형태로 전달되며, 전송은 커넥션 중단과 추가 HTTP 요청 없이 양방향으로 이뤄진다. <br/>
 
 한 번 커넥션이 맺어지면 커넥션을 종료하기 전까지 계속 통신이 가능하다. <br/>
 
