@@ -1,4 +1,4 @@
-package aekjoon.weeks1;
+package baekjoon.weeks1;
 
 /*
 [백준 알고리즘 - 입출력과 사칙연산 단계 3]
