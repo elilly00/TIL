@@ -6,7 +6,7 @@ package baekjoon.weeks1;
 코드 길이 145B
 */
 
-public class baekjoon_10718 {
+public class Baekjoon_10718 {
     public static void main(String[] args) {
         System.out.printf("강한친구 대한육군/n강한친구 대한육군");
     }
