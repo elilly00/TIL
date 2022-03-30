@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 /*
-[백준 알고리즘 - 입출력과 사칙연산 단계 5]
+[백준 알고리즘 - 입출력과 사칙연산 단계 8]
 메모리 : 14280KB
 시간 : 128ms
 코드 길이 : 513B
