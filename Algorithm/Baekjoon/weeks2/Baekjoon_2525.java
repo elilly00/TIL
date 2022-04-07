@@ -14,7 +14,6 @@ import java.util.StringTokenizer;
 메모리 : 16004KB
 시간 : 156ms
 코드 길이 : 756B
-풀이 방법 : 
  */
 public class Baekjoon_2525 {
     // public static void main(String[] args) {
