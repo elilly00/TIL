@@ -1,4 +1,4 @@
-package baekjoon.week1;
+package baekjoon.weeks2;
 
 //import java.util.Scanner;
 import java.io.IOException;
