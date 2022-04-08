@@ -9,7 +9,7 @@ import java.io.IOException;
 메모리 : 18536KB
 시간 : 268ms
 코드 길이 : 272B
-    ↓ BufferedReader + StringTokenizer
+    ↓ BufferedReader
 메모리 : 16252KB
 시간 : 160ms
 코드 길이 : 438B
