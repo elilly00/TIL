@@ -1,4 +1,4 @@
-package baekjoon.weeks2;
+package baekjoon.weeks3;
 
 // import java.util.Scanner;
 import java.io.BufferedReader;
