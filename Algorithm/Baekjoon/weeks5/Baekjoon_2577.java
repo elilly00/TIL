@@ -36,7 +36,6 @@ public class Baekjoon_2577 {
 
     public static void mains(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
 
         int A = Integer.parseInt(br.readLine());
 		int B = Integer.parseInt(br.readLine());
@@ -49,7 +48,7 @@ public class Baekjoon_2577 {
 			T /= 10;
 		}
 		for(int i = 0; i < counts.length; ++i;) {
-			sb.append(counts[i] + "\n");
+			System.ou.println(counts[i]);
 		}
     }
 }
