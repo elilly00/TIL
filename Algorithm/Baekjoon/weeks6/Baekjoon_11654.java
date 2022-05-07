@@ -1,5 +1,6 @@
 package baekjoon.weeks6;
 
+import java.util.Scanner;
 /*
 [백준 알고리즘 - 문자열 단계 1 - 아스키 코드]
 메모리 : 12808KB
