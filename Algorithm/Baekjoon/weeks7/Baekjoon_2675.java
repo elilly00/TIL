@@ -1,7 +1,7 @@
 package baekjoon.weeks7;
 
 // import java.util.Scanner;
-import java.io.BUfferedReader;
+import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 /*
