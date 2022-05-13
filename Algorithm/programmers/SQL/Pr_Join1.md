@@ -1,6 +1,8 @@
 ## 문제 설명
+![JOIN1](https://user-images.githubusercontent.com/90914001/168300938-f31ae9ef-49f1-4b61-9ed8-9c5c1876abaf.PNG)
 
-## SQL 코드
+## 코드
+```SQL
 SELECT O.ANIMAL_ID, O.NAME
 FROM ANIMAL_INS I, ANIMAL_OUTS O
 WHERE I.ANIMAL_ID(+) = O.ANIMAL_ID 
