@@ -1,0 +1,7 @@
+## 문제 설명
+
+## 코드
+```sql
+SELECT *
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID;
