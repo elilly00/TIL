@@ -1,0 +1,8 @@
+## 문제 설명
+![Select6](https://user-images.githubusercontent.com/90914001/169690821-505236f7-74d1-430c-a61d-81f5201855bc.PNG)
+
+## 코드
+```sql
+SELECT ANIMAL_ID, NAME, DATETIME
+FROM ANIMAL_INS
+ORDER BY NAME ASC, DATETIME DESC;
