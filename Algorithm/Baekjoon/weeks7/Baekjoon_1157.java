@@ -1,6 +1,9 @@
 package baekjoon.weeks7;
 
-import java.util.Scanner;
+// import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 /*
 [백준 알고리즘 - 문자열 단계 5 - 단어 공부]
 메모리 : 28040KB
