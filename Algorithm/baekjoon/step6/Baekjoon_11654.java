@@ -14,5 +14,7 @@ public class Baekjoon_11654 {
         int num = (int)ch;
         
         System.out.println(num);
+
+        sc.close();
     }
 }
