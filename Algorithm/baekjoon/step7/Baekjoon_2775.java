@@ -6,15 +6,16 @@ import java.io.InputStreamReader;
 
 /*
 [백준 알고리즘 - 기본 수학1 단계6 - 부녀회장이 될테야]
-메모리 : 11616KB
-시간 : 88ms
-코드 길이 : 834B
+메모리 : 11336KB
+시간 : 80ms
+코드 길이 : 841B
  */
 
 public class Baekjoon_2775 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+        
+        int T = Integer.parseInt(br.readLine());
         int[][] apt = new int[15][15];
         
         for(int i = 0; i <= 14; i++) {
@@ -27,8 +28,6 @@ public class Baekjoon_2775 {
                 apt[i][j] = apt[i][j - 1] + apt[i - 1][j];
             }
         }
-
-        int T = Integer.parseInt(br.readLine());
 
         for(int i = 0; i < T; i++) {
             int k = Integer.parseInt(br.readLine());
