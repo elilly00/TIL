@@ -1,0 +1,60 @@
+
+10월 20, 2021 11:50:22.25 NEW SESSION
+10월 20, 2021 11:50:22.25 [1736:14144:1020/115022.191:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 20, 2021 11:50:22.25 [1736:14144:1020/115022.191:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 20, 2021 11:50:22.25 [1736:14144:1020/115022.191:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 20, 2021 11:50:22.25 [1736:14144:1020/115022.196:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 20, 2021 11:50:22.25 [1736:26356:1020/115022.235:ERROR:device_event_log_impl.cc(214)] [11:50:22.235] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+10월 21, 2021 09:25:17.14 NEW SESSION
+10월 21, 2021 09:25:17.14 [19896:17108:1021/092517.035:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 09:25:17.15 [19896:17108:1021/092517.035:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 09:25:17.15 [19896:17108:1021/092517.035:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 09:25:17.15 [19896:17108:1021/092517.041:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 09:25:17.15 [19896:7820:1021/092517.088:ERROR:device_event_log_impl.cc(214)] [09:25:17.088] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+10월 21, 2021 15:20:44.75 [19896:7820:1021/152044.749:ERROR:CONSOLE(1)] "TypeError: Cannot read properties of undefined (reading 'indexOf') TypeError: Cannot read properties of undefined (reading 'indexOf')
+10월 21, 2021 15:20:44.76     at Li.contentType (devtools://devtools/bundled/core/sdk/sdk.js:1:299255)
+10월 21, 2021 15:20:44.76     at new vt (devtools://devtools/bundled/models/bindings/bindings.js:1:60331)
+10월 21, 2021 15:20:44.76     at St.resourceAdded (devtools://devtools/bundled/models/bindings/bindings.js:1:59503)
+10월 21, 2021 15:20:44.76     at qi.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 21, 2021 15:20:44.76     at _i.addRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:316386)
+10월 21, 2021 15:20:44.76     at qi.onRequestFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:306845)
+10월 21, 2021 15:20:44.76     at et.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 21, 2021 15:20:44.76     at lt.finishNetworkRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:107631)
+10월 21, 2021 15:20:44.76     at lt.loadingFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:102594)
+10월 21, 2021 15:20:44.76     at m.dispatch (devtools://devtools/bundled/core/protocol_client/protocol_client.js:1:7977)", source: devtools://devtools/bundled/core/host/host.js (1)
+10월 21, 2021 15:20:45.51 [19896:7820:1021/152045.516:ERROR:CONSOLE(1)] "TypeError: Cannot read properties of undefined (reading 'indexOf') TypeError: Cannot read properties of undefined (reading 'indexOf')
+10월 21, 2021 15:20:45.51     at Li.contentType (devtools://devtools/bundled/core/sdk/sdk.js:1:299255)
+10월 21, 2021 15:20:45.51     at new vt (devtools://devtools/bundled/models/bindings/bindings.js:1:60331)
+10월 21, 2021 15:20:45.52     at St.resourceAdded (devtools://devtools/bundled/models/bindings/bindings.js:1:59503)
+10월 21, 2021 15:20:45.52     at qi.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 21, 2021 15:20:45.52     at _i.addRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:316386)
+10월 21, 2021 15:20:45.52     at qi.onRequestFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:306845)
+10월 21, 2021 15:20:45.52     at et.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 21, 2021 15:20:45.52     at lt.finishNetworkRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:107631)
+10월 21, 2021 15:20:45.52     at lt.loadingFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:102594)
+10월 21, 2021 15:20:45.52     at m.dispatch (devtools://devtools/bundled/core/protocol_client/protocol_client.js:1:7977)", source: devtools://devtools/bundled/core/host/host.js (1)
+10월 21, 2021 15:20:45.54 [19896:7820:1021/152045.547:ERROR:CONSOLE(1)] "TypeError: Cannot read properties of undefined (reading 'indexOf') TypeError: Cannot read properties of undefined (reading 'indexOf')
+10월 21, 2021 15:20:45.54     at Li.contentType (devtools://devtools/bundled/core/sdk/sdk.js:1:299255)
+10월 21, 2021 15:20:45.54     at new vt (devtools://devtools/bundled/models/bindings/bindings.js:1:60331)
+10월 21, 2021 15:20:45.54     at St.resourceAdded (devtools://devtools/bundled/models/bindings/bindings.js:1:59503)
+10월 21, 2021 15:20:45.54     at qi.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 21, 2021 15:20:45.54     at _i.addRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:316386)
+10월 21, 2021 15:20:45.55     at qi.onRequestFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:306845)
+10월 21, 2021 15:20:45.55     at et.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 21, 2021 15:20:45.55     at lt.finishNetworkRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:107631)
+10월 21, 2021 15:20:45.55     at lt.loadingFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:102594)
+10월 21, 2021 15:20:45.55     at m.dispatch (devtools://devtools/bundled/core/protocol_client/protocol_client.js:1:7977)", source: devtools://devtools/bundled/core/host/host.js (1)
+10월 21, 2021 16:02:39.23 [7296:27728:1021/160239.235:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 16:02:39.23 [7296:27728:1021/160239.235:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 16:02:39.23 [7296:27728:1021/160239.235:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 16:02:39.24 [7296:27728:1021/160239.247:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 16:02:39.31 [7296:28212:1021/160239.319:ERROR:device_event_log_impl.cc(214)] [16:02:39.319] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+10월 22, 2021 09:02:22.69 NEW SESSION
+10월 22, 2021 09:02:22.69 [10356:10012:1022/090222.520:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 22, 2021 09:02:22.70 [10356:10012:1022/090222.520:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 22, 2021 09:02:22.70 [10356:10012:1022/090222.520:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 22, 2021 09:02:22.70 [10356:10012:1022/090222.529:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 22, 2021 09:02:22.70 [10356:10464:1022/090222.585:ERROR:device_event_log_impl.cc(214)] [09:02:22.584] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+10월 22, 2021 09:42:51.70 [10356:10464:1022/094251.704:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/core/sdk/sdk.js (1)

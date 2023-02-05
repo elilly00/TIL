@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>객체</h1>
+	<h2>객체 선언 및 호출</h2>
+	<p>
+		중괄호{ }를 사용하여 객체를 생성하고, 속성에는 모든 자료형이 올 수 있음<br>
+		객체는 키 값을 사용하여 속성 식별
+	</p>
+	<button onclick="test1();">실행확인</button>
+	<script>
+		function test1(){
+			var product = {
+				// 객체 작성법 = key:값
+				pName:'말린 망고',
+				type:'피클',
+				ingredient:['mango', 'sugar'],
+				원산지:'필리핀'
+			};
+			console.log(product);
+			
+			// []를 통해서 속성 접근 : 객체명['속성명']
+			console.log(product['pName']);
+			console.log(product['type']);
+			// type is not defined : type이 정의되어있지 않다 -> type을 변수로 정의되어있기 때문에 ''로 감싸줘야함
+			console.log(product['ingredient']);
+			console.log(product['원산지']);
+			
+			// .을 통해서 속성 접근
+			console.log(product.pName);
+			console.log(product.type);
+			console.log(product.ingredient);
+			console.log(product.원산지);
+		}
+	</script>
+	
+	<h3>객체의 키 식별자 테스트</h3>
+	<p>
+		객체의 키는 모든 문자열 사용<br>
+		.을 이용해서 접근 시 식별할 수 없는 단어를 사용했을 경우 대괄호 사용
+	</p>
+	<button onclick="test2();">실행확인</button>
+	<script>
+		function test2(){
+			var obj = {
+				'key$1':'value1',
+				'key_2':'value2',
+				'key 3':'value3'
+			};
+			console.log(obj);
+			console.log(obj.key$1);
+			console.log(obj.key_2);
+// 			console.log(obj.key 3);
+			// [Error] : Uncaught SyntaxError: missing ) after argument list -> .을 사용했을 때 속성명에 띄어쓰기를 사용하면 에러나기때문에 대괄호를 이용
+			console.log(obj['key 3']);
+		}
+	</script>
+	
+	<h3>객체의 메소드 속성</h3>
+	<p>객체 속성 중 함수 자료형인 속성을 메소드라고 함</p>
+	<button onclick="test3();">실행확인</button>
+	<script>
+		function test3(){
+			var fruit = {
+				name1: '귤',
+				name2: '사과',
+				eat: function(person){
+					console.log(person + "님은 " + name1 + "과 " + name2 + "를 먹는 중입니다");
+					// [Error] : Uncaught ReferenceError: name1 is not defined
+					// this키워드를 이용하여 자신의 속성에 접근
+				}
+			};
+			fruit.eat('신우');
+		}
+	</script>
+	
+	<h3>객체와 반복문</h3>
+	<p>객체의 속성을 살펴볼때는 단순 for문은 불가능하고 for in문을 사용해야함</p>
+	<button onclick="test4();">실행확인</button>
+	<script>
+		function test4(){
+			var movie = {
+				title:'보이스',
+				releaseDate:'2021-09-15',
+				director:['김선', '김곡'],
+				mainActor:['변요한', '김무열', '김희원', '박영훈'],
+				screening:true
+				
+			};
+			console.log(movie);
+			for(var i in movie){
+// 				console.log(i); // key가 출력됨 -> 객체에서 for in문을 사용하면 key를 가져옴
+				console.log(i + ":" + movie[i]);
+			// for in문에서 배열은 인덱스, 객체는 key가 출력됨
+			} 
+		}
+	</script>
+	
+	<h2>객체 속성 추가 및 제거</h2>
+	<p>
+		처음 객체 생성 이후 속성을 추가하거나 삭제하는 것을
+		'동적으로 속성을 추가한다' 혹은 '제거한다'라고 함
+	</p>
+	<button onclick="test5();">실행확인</button>	
+	<script>
+		function test5(){
+			var student = {};
+			console.log(student);
+			
+			student.name = '박신우';
+			student.hobby = 'TV보기';
+			student['strength'] = '프로그래밍';
+			student['dream'] = '돈 많은 백수';
+			student.toString = function(){ // toString 역할 : 대표값을 반환하는 역할
+				var str = '';
+				for(var key in student){
+					if(key != 'toString'){ // key가 toString이 아닐때만 출력
+					str += key + ":" + this[key] + " / ";
+					}
+				}
+				return str;
+			}
+			console.log(student);
+			console.log(student.toString());
+	
+			// delete : 객체 제거
+			delete(student.hobby);
+			console.log(student.toString());
+		}
+	</script>
+	
+	
+	<h2>객체 배열</h2>
+	<button onclick="test6();">실행확인</button>
+	<script>
+		function test6(){
+			var student0 = {name:'차청준', java:90, oracle: 60, jdbc:80, html5:100, css3:40, javascript:70};
+			var student1 = {name:'류라라', java:37, oracle: 88, jdbc:89, html5:77, css3:45, javascript:55};
+			var student2 = {name:'강건강', java:40, oracle: 13, jdbc:50, html5:65, css3:40, javascript:40};
+			var student3 = {name:'정제주', java:78, oracle: 100., jdbc:60, html5:14, css3:30, javascript:85};
+			var student4 = {name:'문미미', java:85, oracle: 78, jdbc:75, html5:55, css3:25, javascript:94};
+			var student5 = {name:'윤예의', java:10, oracle: 65, jdbc:45, html5:90, css3:18, javascript:77};
+			var student6 = {name:'남나눔', java:99, oracle: 80, jdbc:11, html5:78, css3:77, javascript:60};
+			var student7 = {name:'박보배', java:100, oracle: 70, jdbc:20, html5:35, css3:75, javascript:100};
+			var student8 = {name:'송성실', java:25, oracle: 100, jdbc:65, html5:33, css3:12, javascript:35};
+			var student9 = {name:'도대담', java:86, oracle: 100, jdbc:89, html5:10, css3:60, javascript:67};
+			
+			var students = [];  // 객체 배열이 됨
+			students.push(student0);
+			students.push(student1);
+			students.push(student2);
+			students.push(student3);
+			students.push(student4);
+			students.push(student5);
+			students.push(student6);
+			students.push(student7);
+			students.push(student8);
+			students.push(student9);
+			console.log(students);
+			
+			for(var i in students){
+				students[i].getSum = function(){
+					var sum = 0;
+					for(var key in this){
+						if(key != 'name' && key != 'getSum' && key != 'getAvg'){
+							sum += students[i][key];
+						} 
+					}
+					return sum;
+				};
+				
+				students[i].getAvg = function(){
+					return this.getSum() / 6;
+				}
+			}
+			
+			for(var i in students){
+				console.log('이름 : ' + students[i].name 
+							+ ', 총점 : ' + students[i].getSum() 	
+							+ ', 평균 : ' + students[i].getAvg());
+			}
+			
+		}
+	</script>
+	
+</body>
+</html>

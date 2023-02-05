@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    height:  2000px;
+    background-color: black;
+}
+
+section {
+    height: 100vh; /* 화면 높이의 100% 채움 */
+    background: url(https://assets.nflxext.com/ffe/siteui/vlv3/8607d312-c4d0-4ce2-955d-50d728ae845f/f5aa75a9-2c6e-4f3a-a83e-4624365cb04c/KR-ko-20220226-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+}
+
+section:before { /* section 위에 적용시킴 */
+    content: '';
+    background: linear-gradient(to right, black, transparent); /* 오른쪽으로 가면서 검은색에서 투명하게 그라데이션이 됨 */
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+/* 
+    linear-gradient(direction, color, color, ..., transparent) 
+    * direction 
+        * to bottom : 위 → 아래 (기본값)
+        * to top : 아래 → 위
+        * to left : 오른쪽 → 왼쪽
+        * to right : 왼쪽 → 오른쪽
+        * ndeg : n도 방향으로
+*/
+
+h1 {
+    color: white;
+    font-size: 6em;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    font-family: sans-serif;
+}

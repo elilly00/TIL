@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<style>
+	.highlight_0{background : red;}
+	.highlight_1{background : orange;}
+	.highlight_2{background : yellow;}
+	.highlight_3{background : green;}
+	.highlight_4{background : blue;}
+	
+	.nemo{width: 100px; height: 100px; background: orange;}
+</style>
+</head>
+<body>
+	<h1>객체 조작</h1>
+	<h2>기본 설정</h2>
+	<h3>each()</h3>
+	<p>
+		for in문과 비슷한 메소드<br>
+	</p>
+	<!-- 내가 돌릴 대상이 어디에 있느냐에 대한 차이 -->
+	<pre>$.each(<b>object</b>, function(index, item){});</pre>	
+	<pre>$(<b>선택자</b>).each(object, function(index, item){});</pre>	
+	<pre>
+		index : 배열의 인덱스 또는 객체의 키<br>
+		item : 해당 인덱스/키가 가진 값
+	</pre>
+	<div id="urlDiv"></div>
+	<script>
+		var arr = [
+			{name : '네이버', link : 'http://www.naver.com'},
+			{name : '구글', link : 'http://www.google.com'},
+			{name : '다음', link : 'http://www.daum.net'},
+			{name : '네이트', link : 'http://www.nate.com'}	// 객체 배열
+		];
+	
+		$(function(){
+			var output = '';
+			$.each(arr, function(index, item){
+				console.log(index);
+				console.log(item);
+				output += "<h4><a href='" + item.link  + "'>" + item.name +  "</a></h4>";
+			});
+			
+// 			document.getElementById('urlDiv').innerHTML = output; // innerHTML을 사용해야  안에있는 태그들을 해석할 수 있게 됨 / innerText는 태그 그대로 가져옴
+// 			$('#urlDiv').innerHTML = output; 
+			// -> jQuery와 javaScript은 혼용해서 사용할 수 있지만 자스/제이쿼리에서만 쓸 수있는 메소드를 혼용 할 수 없다.
+			
+			//[ innerHTML = html()
+			$('#urlDiv').html(output);
+		});
+	</script>
+	
+	<div id="itemDiv">
+		<h4>item-0</h4>
+		<h4>item-1</h4>
+		<h4>item-2</h4>
+		<h4>item-3</h4>
+		<h4>item-4</h4>
+	
+	</div>
+	<script>
+		$(function(){
+// 			console.log($('#itemDiv>h4'));
+// 			console.log($('#itemDiv').children());
+// 			$('#itemDiv>h4').each(function(index, item){}
+			$('#itemDiv').children().each(function(index, item){
+				console.log(index); // index번호 반환
+				console.log(item); // 객체 반환
+				$(this).addClass('highlight_' + index);
+				// addClass() : 선택된 요소에 클래스 속성 추가하는 메소드
+				
+			});
+		});
+	</script>
+	
+	<h2>객체 생성 및 제거</h2>
+	<h3>요소 추가</h3>
+	<ul id="names">
+		<li id="nam">남나눔</li>
+		<li id="ryu">류라라</li>
+		<li id="mun">문미미</li>
+		<li id="song">송성실</li>
+	</ul>
+	<button onclick="addElement();">요소 추가</button>
+	<script>
+		function addElement(){
+			// append() / appendTo() : 마지막에 추가하는 메소드
+// 			$('#names').append('<li id="yoon">윤예의</li>');
+// 			$('<li id="yoon">윤예의</li>').appendTo('#names');
+
+			// prepend() / prependTo() : 맨 앞에 추가하는 메소드
+// 			$('#names').prepend('<li id="kang">강건강</li>');
+// 			$('<li id="kang">강건강</li>').prependTo('#names');
+			
+			// before() / insertBefore() : 해당 요소 앞에 추가하는 메소드
+// 			$('#song').before('<li id="park">박보배</li>'); 
+// 			$('<li id="park">박보배</li>').insertBefore('#song');
+			
+			// after() / insertAfter() : 해당 요소 뒤에 추가되는 메소드
+// 			$('#nam').after('<li id="do">도대담</li>');
+			$('<li id="do">도대담</li>').insertAfter('#nam');
+
+			// 모두 둘의 기능은 똑같고 적는 방식만 다름
+		}
+	</script>		
+	
+	<h3>객체 복제</h3>
+	<!-- 많이 쓰임 -->
+	<div id="cloneDiv"></div>
+	<script>
+		$(function(){
+			console.log($('#urlDiv').clone());
+// 			$('#cloneDiv').html($('#urlDiv').clone());
+// 			$('#cloneDiv').append($('#urlDiv').clone());
+			$($('#urlDiv').clone()).appendTo('#cloneDiv');
+		});
+	</script>
+	
+	<h3>객체 삭제</h3>
+	<div id="colorDiv1" class="colorDiv">
+		<ul id="colorUl">
+			<li>pink</li>
+			<li>skyblue</li>
+			<li>yellow</li>
+			<li>yellowgreen</li>
+		</ul>
+	</div>
+	<button onclick="return1();">되돌리기1</button>
+	
+	<div id="colorDiv2" class="colorDiv">
+		<ul id="colorUl2">
+			<li>pink</li>
+			<li>skyblue</li>
+			<li>yellow</li>
+			<li>yellowgreen</li>
+		</ul>
+	</div>
+	<button onclick="return2();">되돌리기2</button>
+	
+	<div id="colorDiv3" class="colorDiv">
+		<ul id="colorUl3">
+			<li>pink</li>
+			<li>skyblue</li>
+			<li>yellow</li>
+			<li>yellowgreen</li>
+		</ul>
+	</div>
+	<button onclick="return3();">되돌리기3</button>
+	
+	<script>
+		var removeVal;
+		var detachVal;
+		var emptyVal;
+		
+		$(function(){
+			
+			// 각 li에 마우스를 올리면 글자는 하얗게, 배경색은 li의 내용으로
+			//		ex. pink에 올리면 배경은 pink, 글자는 하얗게
+			// li에 마우스를 벗어나면 배경은 하얗게, 글자는 까맣게
+			
+// 			$('.colorDiv li')
+// 			$('.colorDiv').find('li').mouseenter(function(){
+// 				$(this).css({'color':'white', 'background':$(this).text()});
+// 			});
+// 			$('.colorDiv').find('li').mouseout(function(){
+// 				$(this).css({'color':'black', 'background':'white'});
+// 			});
+			// 메소드 체이닝
+			$('.colorDiv').find('li').mouseenter(function(){
+				$(this).css({'color':'white', 'background':$(this).text()});
+			}).mouseout(function(){
+				$(this).css({'color':'black', 'background':'white'});
+			});
+			
+			removeVal = $('#colorUl').remove();
+			detachVal = $('#colorUl2').detach();
+			emptyVal = $('#colorUl3').empty();
+			
+			console.log(removeVal);
+			console.log(detachVal);
+			console.log(emptyVal);
+			// 모두 삭제한 요소 반환
+		});
+		
+		function return1(){
+			$('#colorDiv1').html(removeVal);
+			// remove는 데이터 형태만 유지 (이벤트는 제외된 상태로 돌아옴)
+		}
+		
+		function return2(){
+			$('#colorDiv2').html(detachVal);
+			// detache는 데이터 형태 및 이벤트 유지 (이벤트까지 포함된 상태로 돌아옴)
+		}
+		
+		function return3(){
+			$('#colorDiv3').html(emptyVal);
+			// empty는 아무것도 유지되지 않음 (돌아오지 않음)
+		}
+	</script>
+	
+	<h3>객체 조작 테스트</h3>
+	<div class="nemo">
+		<button class="boksa">복사</button>
+		<button class="sakje">삭제</button>
+	</div>
+	<div id="content"></div>
+	<script>
+		/* 복사버튼을 누르면 div content에 똑같은 div가 복사가 되어 붙여짐
+		     삭제버튼을 누르면 해당 div 삭제
+		*/
+		
+		// [이벤트는 복사 X]
+		// -문제점-
+		// -> 1. 아이디가 중복 됨 => id 대신 class로 사용
+// 		$(function(){
+// 			$('#boksa').click(function(){
+// 				$(this).parent().clone().appendTo($('#content')); // 이벤트는 복사가 되지 않음
+// 			});
+// 			$('#sakje').click(function(){
+// 				$(this).parent().remove();	// 본래의 것이 삭제 됨
+// 			});
+// 		});
+		
+		// [이벤트까지 모두 복사 / 방법 1]
+		// 2. clone(true) -> 이벤트까지 복사하겠다.
+// 		$(function(){
+// 			$('.boksa').click(function(){
+// 				$(this).parent().clone(true).appendTo($('#content')); 
+// 			});
+// 			$('.sakje').click(function(){
+// 				$(this).parent().remove();
+// 			});
+// 		});
+		
+		// [방법 2]
+		// 복사된 네모가 인식이 안되지만 문서 자체를 읽음으로서 복사된
+		/* 
+			방법1 : $(function()은 '처음에 페이지가 로드되면'이라는 말이기 때문에 내가 처음에 페이지를 로드했을 때 있는 원본 네모만 기억하고있어
+				     복제된 네모는 인지하지 못함. 그것을 방지하기 위해 colne(true)를 이용했음.
+			방법2 : $(documnet).on는 '현재 지금 문서에서'라는 의미이기 때문에 추가된 동적인 요소가 있다면 같이 읽어오기때문에 
+			 	   colne(true)를 이용하지 않아도 복제한 네모까지 읽어 옴
+		*/ 
+		$(document).on('click', '.boksa', function(){
+			$(this).parent().clone().appendTo($('#content'));
+		}).on('click', '.sakje', function(){
+			$(this).parent().remove();
+		})
+		
+	</script>
+	
+</body>
+</html>
